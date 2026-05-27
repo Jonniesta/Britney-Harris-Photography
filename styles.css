@@ -1,0 +1,436 @@
+/* =========================
+   ROOT COLORS
+========================= */
+
+:root {
+  --purple-dark: #2d143d;
+  --purple: #7b2cbf;
+  --purple-light: #c77dff;
+  --lavender: #f6efff;
+
+  --text: #2c2233;
+  --muted: #6f5c7d;
+
+  --white: #ffffff;
+}
+
+/* =========================
+   BASE
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--lavender);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(rgba(20, 8, 30, 0.65),
+    rgba(20, 8, 30, 0.65)),
+    url("hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+/* =========================
+   NAV
+========================= */
+
+nav {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 28px 8%;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--purple-light);
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  max-width: 760px;
+
+  padding: 180px 8%;
+}
+
+.small-text {
+  letter-spacing: 3px;
+  font-size: 13px;
+
+  margin-bottom: 18px;
+
+  color: var(--purple-light);
+}
+
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 76px;
+  line-height: 1.05;
+
+  margin-bottom: 28px;
+}
+
+.hero-description {
+  max-width: 620px;
+
+  font-size: 18px;
+  color: #ece4f3;
+
+  margin-bottom: 38px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  display: inline-block;
+
+  background: var(--purple);
+
+  color: white;
+  text-decoration: none;
+
+  padding: 15px 34px;
+
+  border-radius: 40px;
+
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--purple-light);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 110px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title p {
+  letter-spacing: 3px;
+  font-size: 13px;
+
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+
+.section-title h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+.card {
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 24px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+
+  color: var(--purple);
+
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+  align-items: center;
+
+  padding: 110px 8%;
+
+  background: #ecdefa;
+}
+
+.about-image img {
+  width: 100%;
+  height: 650px;
+
+  object-fit: cover;
+
+  border-radius: 28px;
+}
+
+.about-small {
+  letter-spacing: 3px;
+  font-size: 13px;
+
+  color: var(--purple);
+
+  margin-bottom: 14px;
+}
+
+.about-content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px;
+
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  color: var(--muted);
+
+  font-size: 17px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 360px;
+
+  object-fit: cover;
+
+  border-radius: 22px;
+
+  transition: 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  padding: 110px 8%;
+
+  background: var(--purple-dark);
+
+  color: white;
+}
+
+.contact-container {
+  max-width: 760px;
+  margin: auto;
+
+  text-align: center;
+}
+
+.contact-small {
+  letter-spacing: 3px;
+  font-size: 13px;
+
+  color: var(--purple-light);
+
+  margin-bottom: 10px;
+}
+
+.contact h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px;
+
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  color: #e5d9f0;
+
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+
+  padding: 18px;
+
+  border: none;
+  border-radius: 16px;
+
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+button {
+  background: var(--purple);
+
+  color: white;
+
+  border: none;
+  border-radius: 40px;
+
+  padding: 16px;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: var(--purple-light);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+
+  padding: 28px;
+
+  background: #1d1028;
+  color: #d8cae6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 950px) {
+
+  nav {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content {
+    padding-top: 140px;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+  }
+
+  .cards,
+  .gallery,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image img {
+    height: 450px;
+  }
+
+  .section-title h2,
+  .about-content h2,
+  .contact h2 {
+    font-size: 42px;
+  }
+
+}
